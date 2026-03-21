@@ -55,6 +55,7 @@ test_*.py
 *.xlsx
 *.json
 *.txt
+*.csv
 
 
 # UVV
