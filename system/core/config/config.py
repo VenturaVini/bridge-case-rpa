@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-# raiz do projeto (bridge-case-rpa-main), nao depende de onde roda o script
 RAIZ = str(Path(__file__).parent.parent.parent.parent)
 
 
@@ -16,7 +15,7 @@ def carregar_config() -> dict:
     load_dotenv(override=True)
 
     config = {
-        # raiz do projeto pra montar caminhos absolutos
+        # raiz do projeto
         "raiz": RAIZ,
 
         # geral
@@ -27,6 +26,16 @@ def carregar_config() -> dict:
         "yahoo_url": os.getenv("YAHOO_URL", "https://news.yahoo.com"),
         "yahoo_timeout": int(os.getenv("YAHOO_TIMEOUT")),
         "yahoo_headless": os.getenv("yahoo_headless"),
+
+
+         # modulo C - gmail
+        "gmail_usuario": os.getenv("GMAIL_USUARIO"),
+        "gmail_senha_app": os.getenv("GMAIL_SENHA_APP"),
+        "gmail_servidor": os.getenv("GMAIL_SERVIDOR"),
+        "gmail_porta": int(os.getenv("GMAIL_PORTA")),
+        "filtro_assunto": os.getenv("FILTRO_ASSUNTO"),
+        "pasta_validos": os.path.join(RAIZ, "system", "data", "inbox", "valid"),
+        "pasta_rejeitados": os.path.join(RAIZ, "system", "data", "inbox", "rejected"),
 
         
         # uipath 

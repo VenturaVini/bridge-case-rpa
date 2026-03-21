@@ -51,6 +51,11 @@ inbox/
 test_*.py
 *.tmp
 
+# Arquivos de dados
+*.xlsx
+*.json
+*.txt
+
 
 # UVV
 uv.lock
