@@ -159,7 +159,7 @@ class YahooNewsExtracao:
         except Exception:
             return ""
 
-    # OPICIONAL - Essa parte ele joga para o Uipath
+    # OPCIONAL - Essa parte ele joga para o Uipath
 
     def _publicar_na_fila(self) -> None:
         '''Publica cada noticia na fila do Orchestrator.'''
