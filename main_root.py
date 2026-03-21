@@ -3,8 +3,6 @@ from datetime import datetime
 from system.core.config.config import carregar_config
 from system.core.config.logger import setup_logger
 from system.core.services.yahoo_service import YahooNewsExtracao
-from system.core.services.gmail_service import ProcessadorModuloC
-from system.core.services.pdf_service import ProcessadorModuloD
 from system.core.utils.csv import salvar_csv
 
 
