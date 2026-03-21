@@ -44,7 +44,7 @@ def carregar_config() -> dict:
         "orchestrator_tenant": os.getenv("ORCHESTRATOR_TENANT"),
         "orchestrator_client_id": os.getenv("ORCHESTRATOR_CLIENT_ID"),
         "orchestrator_client_secret": os.getenv("ORCHESTRATOR_CLIENT_SECRET"),
-
+        "orchestrator_folder_id": os.getenv("ORCHESTRATOR_FOLDER_ID"),
 
         # queues
         "fila_modulo_a": os.getenv("FILA_MODULO_A", "Bridge_Modulo_A"),
