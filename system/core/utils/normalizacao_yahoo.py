@@ -1,7 +1,7 @@
 import re
 from system.core.config.logger import setup_logger
 
-log = setup_logger('yahoo_service')
+log = setup_logger('yahoo_services')
 
 
 def limpar_texto(texto: str):

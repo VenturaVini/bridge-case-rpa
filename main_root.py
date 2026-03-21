@@ -31,36 +31,6 @@ def executar_modulo_a() -> bool:
     return sucesso
 
 
-def executar_modulo_c() -> bool:
-    '''
-    Modulo C: le emails do Gmail, valida PDFs e salva.
-    '''
-    config = carregar_config()
-    processador = ProcessadorModuloC(config)
-
-    sucesso = processador.executar()
-
-    _imprimir_resumo(sucesso, processador.metricas)
-    return sucesso
-
-
-def executar_modulo_d() -> bool:
-    '''
-    Modulo D: extrai CPF/CEP dos PDFs e consolida em XLSX.
-    '''
-    log = setup_logger('modulo_d')
-    config = carregar_config()
-    processador = ProcessadorModuloD(config)
-
-    pasta_pdfs = config.get('pasta_validos')
-    sucesso = processador.executar(pasta_pdfs)
-
-    if sucesso:
-        arquivo_xlsx = processador.salvar_xlsx(config.get('pasta_saida_xlsx'))
-        log.info(f"dados salvos em {arquivo_xlsx}")
-
-    _imprimir_resumo(sucesso, processador.metricas)
-    return sucesso
 
 
 def _imprimir_resumo(sucesso: bool, metricas: dict) -> None:

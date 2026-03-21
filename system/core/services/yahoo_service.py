@@ -5,7 +5,7 @@ from system.core.services.orchestrator_client import OrchestratorClient
 from system.core.utils.normalizacao_yahoo import normalizar_dados
 import time
 
-log = setup_logger('yahoo_service')
+log = setup_logger('yahoo_services')
 
 
 class YahooNewsExtracao:
@@ -37,8 +37,8 @@ class YahooNewsExtracao:
         Returns:
             Bool
         '''
-        max_tentativas = self.config.get('max_tentativas')
-        espera_base = self.config.get('espera_base')
+        max_tentativas = 3
+        espera_base = 5
         tentativa = 0
 
         while tentativa < max_tentativas:

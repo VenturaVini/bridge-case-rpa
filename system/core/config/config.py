@@ -28,6 +28,15 @@ def carregar_config() -> dict:
         "yahoo_timeout": int(os.getenv("YAHOO_TIMEOUT")),
         "yahoo_headless": os.getenv("yahoo_headless"),
 
+        
+        # uipath 
+        "orchestrator_url": os.getenv("ORCHESTRATOR_URL"),
+        "orchestrator_account": os.getenv("ORCHESTRATOR_ACCOUNT_NAME"),
+        "orchestrator_tenant": os.getenv("ORCHESTRATOR_TENANT"),
+        "orchestrator_client_id": os.getenv("ORCHESTRATOR_CLIENT_ID"),
+        "orchestrator_client_secret": os.getenv("ORCHESTRATOR_CLIENT_SECRET"),
+
+
         # queues
         "fila_modulo_a": os.getenv("FILA_MODULO_A", "Bridge_Modulo_A"),
         "fila_modulo_b": os.getenv("FILA_MODULO_B", "Bridge_Modulo_B"),
