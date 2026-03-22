@@ -51,11 +51,11 @@ inbox/
 test_*.py
 *.tmp
 
-# Arquivos de dados
-*.xlsx
-*.json
-*.txt
-*.csv
+# Arquivos de dados (apenas na pasta system/data/)
+system/data/*.xlsx
+system/data/*.json
+system/data/*.txt
+system/data/*.csv
 
 
 # UVV
@@ -73,6 +73,16 @@ uv.lock
 .settings/
 .screenshots/
 .tmh/
+
+# Exceções modulo-b (UiPath)
+!modulo-b/.objects/
+!modulo-b/.objects/**
+!modulo-b/.project/
+!modulo-b/.project/**
+!modulo-b/.settings/
+!modulo-b/.settings/**
+!modulo-b/.tmh/
+!modulo-b/.tmh/**
 
 # Outputs
 *.nupkg
