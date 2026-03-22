@@ -66,8 +66,9 @@ class EmailModuloC:
             #metricas
             self.metricas['recebidos'] = len(ids_emails)
 
-            if self.metricas['recebidos'] > 0: # calculo de porcetagem do q ele fez com o total do que ele fez
-                self.metricas['taxa_sucesso'] = (self.metricas['processados'] / self.metricas['recebidos']) * 100
+            total_tentados = self.metricas['processados'] + self.metricas['rejeitados'] # soma os processados e rejeitados
+            if total_tentados > 0:
+                self.metricas['taxa_sucesso'] = (self.metricas['processados'] / total_tentados) * 100  # calcula todos acima e divide pelo total
 
             self.log.info(f"processou {self.metricas['processados']} emails")
             return True
