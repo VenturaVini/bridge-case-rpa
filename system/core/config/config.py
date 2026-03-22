@@ -37,6 +37,8 @@ def carregar_config() -> dict:
         "pasta_validos": os.path.join(RAIZ, "system", "data", "inbox", "valid"),
         "pasta_rejeitados": os.path.join(RAIZ, "system", "data", "inbox", "rejected"),
 
+        # modulo D - pdf
+        "pasta_saida_xlsx": os.getenv("PASTA_SAIDA_XLSX"),
         
         # uipath 
         "orchestrator_url": os.getenv("ORCHESTRATOR_URL"),
