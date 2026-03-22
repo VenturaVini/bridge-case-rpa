@@ -60,3 +60,29 @@ test_*.py
 
 # UVV
 uv.lock
+
+
+.log
+
+
+
+# UiPath
+.local/
+.objects/
+.project/
+.settings/
+.screenshots/
+.tmh/
+
+# Outputs
+*.nupkg
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/

@@ -1,0 +1,6 @@
+{
+  "Name": "TESTE_UIPATH",
+  "ProjectType": "Process",
+  "Description": "Processo em Branco",
+  "MainFile": "Main.xaml"
+}
