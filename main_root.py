@@ -4,6 +4,7 @@ from system.core.config.config import carregar_config
 from system.core.config.logger import setup_logger
 from system.core.services.yahoo_service import YahooNewsExtracao
 from system.core.services.gmail_service import EmailModuloC
+from system.core.services.pdf_service import ModuloD
 from system.core.utils.csv import salvar_csv
 
 
@@ -43,6 +44,25 @@ def executar_modulo_c() -> bool:
 
     _imprimir_resumo(sucesso, processador.metricas)
     return sucesso
+
+def executar_modulo_d():
+    '''
+    Modulo D: Coleta CPF/CEP dos pdfs trata depois salva em xlsx.
+    '''
+    log = setup_logger('modulo_d')
+    config = carregar_config()
+    processador = ModuloD(config)
+
+    pasta_pdfs = config.get('pasta_validos')
+    sucesso = processador.executar(pasta_pdfs)
+
+    if sucesso:
+        arquivo_xlsx = processador.salvar_xlsx(config.get('pasta_saida_xlsx'))
+        log.info(f"dados salvos em {arquivo_xlsx}")
+
+    _imprimir_resumo(sucesso, processador.metricas)
+    return sucesso
+
 
 def _imprimir_resumo(sucesso: bool, metricas: dict) -> None:
     '''Printa o resumo em JSON pro UiPath ler.'''
