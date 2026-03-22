@@ -182,11 +182,12 @@ class YahooNewsExtracao:
                     dados=noticia,
                     referencia=referencia
                 )
-
-                if sucesso:
-                    self.log.info(f"publicada noticia {i}")
+                if sucesso: # informa se publicou/ deu falha por duplicar ou outro motivo
+                    self.log.info(f"publicada noticia {i} | noticia: {noticia.get('titulo', '')[:50]}")
+                    
                 else:
-                    self.log.warning(f"falhou ao publicar noticia {i}")
+                    self.log.warning(f"falhou ao publicar noticia {i}  | noticia: {noticia.get('titulo', '')[:50]}")
+                    
 
         except Exception as e:
             self.log.warning(f"erro ao publicar na fila: {str(e)}")
