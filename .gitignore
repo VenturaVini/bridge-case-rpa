@@ -1,0 +1,88 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Projeto
+.env
+system/data/logs/
+system/data/coins_*.csv
+system/data/coins_*.json
+system/data/news_raw_*.csv
+system/data/dados_extraidos_*.xlsx
+system/data/inbox/
+inbox/
+
+# Testes locais
+test_*.py
+*.tmp
+
+# Arquivos de dados
+*.xlsx
+*.json
+*.txt
+*.csv
+
+
+# UVV
+uv.lock
+
+
+.log
+
+
+
+# UiPath
+.local/
+.objects/
+.project/
+.settings/
+.screenshots/
+.tmh/
+
+# Outputs
+*.nupkg
+
+# Logs
+*.log
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# VS Code
+.vscode/
