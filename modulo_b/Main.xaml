@@ -246,7 +246,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1499,5114" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1220.6666666666665,4705.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="Metricas_Tempo_Inicio" />
       <Variable x:TypeArguments="s:DateTime" Name="Metricas_Tempo_Fim" />
@@ -267,8 +267,8 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Queue Modulo A" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="524,176" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="Bridge_Modulo_A" TransactionItem="[transactionItem]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="LogJSON - Invoke Workflow File (config\LogJSON.xaml)" sap:VirtualizedContainerService.HintSize="524,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="config\LogJSON.xaml">
+    <ui:GetQueueItem ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Queue Modulo A" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetQueueItem_2" QueueType="Bridge_Modulo_A" TransactionItem="[transactionItem]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="LogJSON - Invoke Workflow File (config\LogJSON.xaml)" sap:VirtualizedContainerService.HintSize="524,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="config\LogJSON.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Nivel">INFO</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Modulo">Modulo_B</InArgument>
@@ -277,7 +277,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_Status">sucesso</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Assign sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="Assign_14">
+    <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_14">
       <Assign.To>
         <OutArgument x:TypeArguments="s:DateTime">[Metricas_Tempo_Inicio]</OutArgument>
       </Assign.To>
@@ -285,7 +285,7 @@
         <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="Assign_15">
+    <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_15">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensRecebidos]</OutArgument>
       </Assign.To>
@@ -293,7 +293,7 @@
         <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="Assign_16">
+    <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_16">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensProcessados]</OutArgument>
       </Assign.To>
@@ -301,7 +301,7 @@
         <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="Assign_17">
+    <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_17">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensRejeitados]</OutArgument>
       </Assign.To>
@@ -309,14 +309,14 @@
         <InArgument x:TypeArguments="x:Int32">[0]</InArgument>
       </Assign.Value>
     </Assign>
-    <If sap2010:Annotation.AnnotationText="Verifica se o item tem dados" Condition="[TransactionItem IsNot Nothing]" DisplayName="If - Verifica se existe Item na Queue" sap:VirtualizedContainerService.HintSize="524,3695" sap2010:WorkflowViewState.IdRef="If_1">
+    <If sap2010:Annotation.AnnotationText="Verifica se o item tem dados" Condition="[TransactionItem IsNot Nothing]" DisplayName="If - Verifica se existe Item na Queue" sap:VirtualizedContainerService.HintSize="524,3277.3333333333335" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap2010:Annotation.AnnotationText="Coleta Todas as variaveis do modulo A" DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,3070" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap2010:Annotation.AnnotationText="Coleta Todas as variaveis do modulo A" DisplayName="Then" sap:VirtualizedContainerService.HintSize="522,3081.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="ss:SecureString" Name="senhaRemetente" />
             <Variable x:TypeArguments="x:String" Name="emailRemetente" />
@@ -336,7 +336,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap2010:Annotation.AnnotationText="Coletando Tema do Queue" DisplayName="Extract the specific content named &quot;titulo&quot; from the retrieved transaction item." sap:VirtualizedContainerService.HintSize="488,206" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign sap2010:Annotation.AnnotationText="Coletando Tema do Queue" DisplayName="Extract the specific content named &quot;titulo&quot; from the retrieved transaction item." sap:VirtualizedContainerService.HintSize="488,207.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_1">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[tema]</OutArgument>
             </Assign.To>
@@ -349,7 +349,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="LogJSON - Invoke Workflow File (config\LogJSON.xaml)" sap:VirtualizedContainerService.HintSize="488,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="config\LogJSON.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="LogJSON - Invoke Workflow File (config\LogJSON.xaml)" sap:VirtualizedContainerService.HintSize="488,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="config\LogJSON.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_Nivel">INFO</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_Modulo">Modulo_B</InArgument>
@@ -358,12 +358,12 @@
               <InArgument x:TypeArguments="x:String" x:Key="in_Status">sucesso</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="tema_email_tech" CacheStrategy="None" DisplayName="Tema Tech" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,176" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="tema_email_tech" CacheStrategy="None" DisplayName="Tema Tech" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">[tema_email_tech]</OutArgument>
             </ui:GetRobotAsset.Value>
           </ui:GetRobotAsset>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Email pra envio do temas Tech" AssetName="lista_email_grupo_tech" CacheStrategy="None" DisplayName="Email(s) Tech" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,207" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Email pra envio do temas Tech" AssetName="lista_email_grupo_tech" CacheStrategy="None" DisplayName="Email(s) Tech" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,207.33333333333334" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">[lista_email_grupo_tech]</OutArgument>
             </ui:GetRobotAsset.Value>
@@ -373,7 +373,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotAsset>
-          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Email pra envio do temas diferentes de Tech" AssetName="lista_email_geral" CacheStrategy="None" DisplayName="Email(s) Gerais" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,207" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+          <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Email pra envio do temas diferentes de Tech" AssetName="lista_email_geral" CacheStrategy="None" DisplayName="Email(s) Gerais" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,207.33333333333334" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
             <ui:GetRobotAsset.Value>
               <OutArgument x:TypeArguments="x:String">[lista_email_geral]</OutArgument>
             </ui:GetRobotAsset.Value>
@@ -383,33 +383,33 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:GetRobotAsset>
-          <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="gmail_conta_envio_email" CacheStrategy="None" DisplayName="Credencias da conta remetente do Gmail" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[senhaRemetente]" Username="[emailRemetente]" />
-          <If sap2010:Annotation.AnnotationText="Verifico se a lista setada de temas bate com TECH" Condition="[tema_email_tech.Split(&quot;,&quot;).Any(Function(t) tema.ToLower().Contains(t.ToLower()))]" DisplayName="If - Verifica se o tema atual, está dentro da lista de Tema Tech" sap:VirtualizedContainerService.HintSize="488,1830" sap2010:WorkflowViewState.IdRef="If_2">
+          <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="gmail_conta_envio_email" CacheStrategy="None" DisplayName="Credencias da conta remetente do Gmail" FolderPath="vini.ventura98@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="488,176.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[senhaRemetente]" Username="[emailRemetente]" />
+          <If sap2010:Annotation.AnnotationText="Verifico se a lista setada de temas bate com TECH" Condition="[tema_email_tech.Split(&quot;,&quot;).Any(Function(t) tema.ToLower().Contains(t.ToLower()))]" DisplayName="If - Verifica se o tema atual, está dentro da lista de Tema Tech" sap:VirtualizedContainerService.HintSize="488,1838" sap2010:WorkflowViewState.IdRef="If_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <If.Then>
-              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,864" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,868" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Envia para cada email da lista de grupos Tech" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="452,804" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[lista_email_grupo_tech.Split(&quot;,&quot;)]">
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Envia para cada email da lista de grupos Tech" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="452,808" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[lista_email_grupo_tech.Split(&quot;,&quot;)]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="x:String">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="450,651" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="450,654.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Funcão de envio de email Tech" sap:VirtualizedContainerService.HintSize="416,250" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="utils\EnviarEmailTech.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Funcão de envio de email Tech" sap:VirtualizedContainerService.HintSize="416,250.66666666666666" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="utils\EnviarEmailTech.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="ui:QueueItem" x:Key="transactionItem">[transactionItem]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="currentText">[currentText]</InArgument>
@@ -420,7 +420,7 @@
                             <InArgument x:TypeArguments="x:String" x:Key="titulo">[transactionItem.SpecificContent("titulo").ToString]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <Assign DisplayName="Metrica de Recebido +1" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <Assign DisplayName="Metrica de Recebido +1" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_9">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensRecebidos]</OutArgument>
                           </Assign.To>
@@ -428,7 +428,7 @@
                             <InArgument x:TypeArguments="x:Int32">[Metricas_ItensRecebidos + 1]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign DisplayName="Metrica de Processo +1" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_20">
+                        <Assign DisplayName="Metrica de Processo +1" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_20">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensProcessados]</OutArgument>
                           </Assign.To>
@@ -448,25 +448,25 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,805" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,808.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Envia para cada email da lista dos outros grupos&#xA;" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="452,745" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[lista_email_geral.Split(&quot;,&quot;)]">
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Envia para cada email da lista dos outros grupos&#xA;" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="452,748.6666666666666" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[lista_email_geral.Split(&quot;,&quot;)]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="x:String">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="450,578" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="450,581.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Função de email Geral" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="utils\EnviarEmailGeral.xaml">
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Função de email Geral" sap:VirtualizedContainerService.HintSize="416,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="utils\EnviarEmailGeral.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="titulo">[transactionItem.SpecificContent("titulo").ToString]</InArgument>
                             <InArgument x:TypeArguments="x:String" x:Key="tema">[transactionItem.SpecificContent("tema").ToString]</InArgument>
@@ -477,15 +477,15 @@
                             <InArgument x:TypeArguments="ui:QueueItem" x:Key="transactionItem">[transactionItem]</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <Assign DisplayName="Metrica de rejeitados +1" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_18">
+                        <Assign DisplayName="Metrica de Recebido +1" sap:VirtualizedContainerService.HintSize="416,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_21">
                           <Assign.To>
-                            <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensRejeitados]</OutArgument>
+                            <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensRecebidos]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
-                            <InArgument x:TypeArguments="x:Int32">[Metricas_ItensRejeitados + 1]</InArgument>
+                            <InArgument x:TypeArguments="x:Int32">[Metricas_ItensRecebidos + 1]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign DisplayName="Metrica de Processo +1" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_19">
+                        <Assign DisplayName="Metrica de Processo +1" sap:VirtualizedContainerService.HintSize="416,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_19">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Int32">[Metricas_ItensProcessados]</OutArgument>
                           </Assign.To>
@@ -508,14 +508,14 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else - Se caso o Item estiver sem dados" sap:VirtualizedContainerService.HintSize="522,455" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else - Se caso o Item estiver sem dados" sap:VirtualizedContainerService.HintSize="522,25.333333333333332" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="LogJSON - Invoke Workflow File (config\LogJSON.xaml)" sap:VirtualizedContainerService.HintSize="488,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="config\LogJSON.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="LogJSON - Invoke Workflow File (config\LogJSON.xaml)" sap:VirtualizedContainerService.HintSize="488,177.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="config\LogJSON.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_Nivel">WARN</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_Modulo">Modulo_B</InArgument>
@@ -524,7 +524,7 @@
               <InArgument x:TypeArguments="x:String" x:Key="in_Status">sucesso</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <ui:SetTransactionStatus ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="488,218" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_6" Reason="[&quot;O tema para o Titulo &quot; + transactionItem.SpecificContent(&quot;titulo&quot;).ToString().Substring(0, Math.Min(30, transactionItem.SpecificContent(&quot;titulo&quot;).ToString().Length)) + &quot; está vázio&quot;]" Status="Failed" TransactionItem="[transactionItem]">
+          <ui:SetTransactionStatus ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" sap:VirtualizedContainerService.HintSize="488,220" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_6" Reason="[&quot;O tema para o Titulo &quot; + transactionItem.SpecificContent(&quot;titulo&quot;).ToString().Substring(0, Math.Min(30, transactionItem.SpecificContent(&quot;titulo&quot;).ToString().Length)) + &quot; está vázio&quot;]" Status="Failed" TransactionItem="[transactionItem]">
             <ui:SetTransactionStatus.Analytics>
               <scg:Dictionary x:TypeArguments="x:String, InArgument" />
             </ui:SetTransactionStatus.Analytics>
@@ -535,7 +535,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <Assign sap:VirtualizedContainerService.HintSize="524,175" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign sap:VirtualizedContainerService.HintSize="524,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="s:DateTime">[Metricas_Tempo_Fim]</OutArgument>
       </Assign.To>
